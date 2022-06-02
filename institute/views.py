@@ -13,12 +13,12 @@ from .models import Institute
 
 class InstituteListView(ListView):
     model = Institute
-    template_name = "Institute/list.html"
+    template_name = "institute/list.html"
 
 
 class InstituteDetailView(FormMixin, DetailView):
     model = Institute
-    template_name = "Institute/detail.html"
+    template_name = "institute/detail.html"
     slug_field = "id"
     slug_url_kwarg = "id"
     form_class = InstituteCourseForm
@@ -52,7 +52,7 @@ class InstituteCreateView(CreateView):
     model = Institute
     success_url = reverse_lazy("institute:list")
     form_class = InstituteForm
-    template_name = "Institute/create.html"
+    template_name = "institute/create.html"
 
 
 class InstituteUpdateView(UpdateView):
@@ -60,7 +60,7 @@ class InstituteUpdateView(UpdateView):
     form_class = InstituteForm
     slug_field = "id"
     slug_url_kwarg = "id"
-    template_name = "Institute/update.html"
+    template_name = "institute/update.html"
     success_url = reverse_lazy("institute:list")
 
     def get_success_url(self):
