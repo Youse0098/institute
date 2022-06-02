@@ -25,6 +25,7 @@ class UserAdmin(BaseUserAdmin):
                     "first_name",
                     "last_name",
                     "password",
+                    "national_code",
                 )
             },
         ),
@@ -52,6 +53,7 @@ class UserAdmin(BaseUserAdmin):
                     "phone_number",
                     "first_name",
                     "last_name",
+                    "national_code",
                     "password1",
                     "password2",
                 )
