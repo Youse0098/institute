@@ -32,7 +32,7 @@ class CourseDetailView(AdminUserMixin, DetailView):
 class CourseCreateView(CreateView):
     model = Course
     template_name = "course/create.html"
-    success_url = reverse_lazy("course:course_list")
+    success_url = reverse_lazy("Course:course_list")
     form_class = CourseCreateForm
 
 
@@ -44,7 +44,7 @@ class CourseUpdateView(AdminUserMixin, UpdateView):
     form_class = CourseUpdateForm
 
     def get_success_url(self):
-        return reverse("course:course_detail", kwargs=[self.object.id])
+        return reverse("Course:course_detail", kwargs=[self.object.id])
 
 
 class CourseDeleteView(AdminUserMixin, View):
