@@ -11,7 +11,7 @@ class StudentGradeUpdateForm(forms.Form):
 
 class StudentInstallmentForm(forms.Form):
     count = forms.IntegerField(validators=[MinValueValidator(2), MaxValueValidator(10)],
-                               label='نعداد اقساز را انتخاب کنید')
+                               label='نعداد اقساط را انتخاب کنید')
 
 
 class StudentSelectForm(forms.Form):
