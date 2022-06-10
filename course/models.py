@@ -67,6 +67,7 @@ class Course(models.Model):
         on_delete=models.CASCADE,
         blank=True,
         null=True,
+        verbose_name="رشته",
     )
     institute = models.ForeignKey(
         Institute,
@@ -74,6 +75,7 @@ class Course(models.Model):
         related_name="courses",
         null=True,
         blank=True,
+        verbose_name="آموزشگاه",
     )
 
     participation = models.ManyToManyField(
