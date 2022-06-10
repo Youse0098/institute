@@ -61,6 +61,7 @@ class Course(models.Model):
         on_delete=models.CASCADE,
         blank=True,
         null=True,
+        verbose_name="پایه",
     )
     major = models.ForeignKey(
         Major,
