@@ -32,7 +32,7 @@ class CourseDetailView(AdminUserMixin, DetailView):
 class CourseCreateView(CreateView):
     model = Course
     template_name = "course/create.html"
-    success_url = reverse_lazy("Course:list")
+    success_url = reverse_lazy("Course:List")
     form_class = CourseCreateForm
 
 
@@ -51,7 +51,7 @@ class CourseDeleteView(AdminUserMixin, View):
     def get(self, request, course_id):
         course = get_object_or_404(Course, id=course_id)
         course.delete()
-        return redirect("Course:list")
+        return redirect("Course:List")
 
 
 class CourseParticipationAdd(View):
