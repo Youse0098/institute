@@ -304,7 +304,7 @@ class StudentGradeUpdate(View):
 
 class StudentProfileView(LoginRequiredMixin, View):
     def get(self, request):
-        user_obj = get_object_or_404(Student, id=self.request.user.id)
+        user_obj = get_object_or_404(Student, id=self.request.user.student.id)
         return render(request, 'student/profile.html', {"object": user_obj})
 
 
