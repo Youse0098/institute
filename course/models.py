@@ -81,6 +81,7 @@ class Course(models.Model):
 
     participation = models.ManyToManyField(
         Student,
+        related_name="part",
     )
     is_active = models.BooleanField(
         default=False,
