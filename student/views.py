@@ -60,7 +60,8 @@ class StudentCreateView(CreateView):
             first_name=cd["first_name"],
             last_name=cd["last_name"],
             phone_number=cd["phone_number"],
-            password=cd['national_code']
+            password=cd['national_code'],
+            is_student=True,
         )
         new_form.user = user_obj
         new_form.save()
