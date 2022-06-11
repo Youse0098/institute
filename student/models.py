@@ -67,11 +67,11 @@ class Student(models.Model):
         return reverse("Student:detail", args=[self.pk])
 
     def total_pay(self):
-        total_paying_estimate = self.course_set.filter(is_active=True).aggregate(Sum("fee"))["fee__sum"]
+        total_paying_estimate = self.part.filter(is_active=True).aggregate(Sum("fee"))["fee__sum"]
         return total_paying_estimate
 
     def get_course_count(self):
-        course_count = self.course_set.all().only("id").count()
+        course_count = self.part.all().only("id").count()
         return course_count
 
 
