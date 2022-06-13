@@ -48,14 +48,24 @@
 
 <form method="post" action=''>
   {% csrf_token %}
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">دانش آموزانی که میخ.واهید برای ان ها پیام اسال شود را انتخاب کنید
-    <select class="form-control" id="exampleFormControlSelect1">
-      {% for course in student_list %}
+
+      
+      
+        <div class="form-group">
+    <label for="exampleFormControlSelect2">دانش آموزانی که میخ.واهید برای ان ها پیام اسال شود را انتخاب کنید</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+          {% for course in student_list %}
       <option>{{ course }}</option>
       {% endfor %}
     </select>
   </div>
+      
+      
+      
+      
+      
+      
+      
   <div class="form-group">
     <label for="exampleFormControlTextarea1">متن پیام خود را برای ارسال وارد کنید
     <textarea class="form-control" id="exampleFormControlTextarea1"  cols="15" rows="10"></textarea>
