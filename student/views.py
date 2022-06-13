@@ -264,10 +264,10 @@ class StudentSmsSendView(View):
         return render(request,'student/sms.html',{'course_list':course})
           
 
-class StudentSmsSendView(View):
+class StudentSmsSendOnlyView(View):
     def get(self,request):
         student=Student.objects.all()
-        return render(request,'student/sms.html',{'student_list':student})        
+        return render(request,'student/sms1.html',{'student_list':student})        
         
 class MajorDeleteView(View):
     def get(self, request, major_id):
