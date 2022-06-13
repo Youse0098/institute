@@ -1,5 +1,51 @@
 {% extends  'base.html' %}
 {% block content %}
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <div class="container-full">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                      <h3 class="page-title">
+                        ارسال پیام برای دانش آموزان
+                        </3>
+                        <div class="d-inline-block align-items-center">
+                            <nav>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html"><i
+                                            class="mdi mdi-home-outline"></i></a></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <section class="content">
+
+                <div class="row">
+
+                    <div class="col-11 m-auto">
+                        <div class="box">
+
+                            <div class="box-header">
+                                <h4 class="box-title">ارسال پیام برای دانش آموزان</h4>
+                            </div>
+                            <div class="box-body">
+
+
+
+
+
+
+
+
+
+
 <form method="post" action=''>
   {% csrf_token %}
   <div class="form-group">
@@ -29,4 +75,14 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 </form>
+                              </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- ./col -->
+                    </div>
+                    <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+    </div>
 {% endblock content %}
