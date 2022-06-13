@@ -258,7 +258,12 @@ class StudentSelectView(View):
             print(student_list)
             return redirect("Student:list")
 
-
+class StudentSmsSendView(View):
+  def get(self,request):
+    course=Course.objects.all()
+    retuen render(request,'student/sms.html',{'course_list':course})
+          
+          
 class MajorDeleteView(View):
     def get(self, request, major_id):
         major_obj = get_object_or_404(Major, id=major_id)
