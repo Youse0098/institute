@@ -263,7 +263,12 @@ class StudentSmsSendView(View):
         course=Course.objects.all()
         return render(request,'student/sms.html',{'course_list':course})
           
-          
+
+class StudentSmsSendView(View):
+    def get(self,request):
+        student=Student.objects.all()
+        return render(request,'student/sms.html',{'student_list':student})        
+        
 class MajorDeleteView(View):
     def get(self, request, major_id):
         major_obj = get_object_or_404(Major, id=major_id)
