@@ -185,29 +185,109 @@
                                     </div>
 
                                 </div>
-                                <!-- /.tab-pane -->
+                         
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				             <div class="active tab-pane" id="today">
 
-                                <div class="tab-pane" id="settings">
 
-                                    <div class="col-md-12 col-12 m-auto">
-                                        <div class="box">
-                                            <div class="box-header with-border">
-                                                <h2>مجموع درآمد آموزشگاه:{{ object.total_earn }}</h2>
+                                    <div class="box p-15">
+                                        <div class="timeline timeline-single-column timeline-single-full-column">
+
+    <span class="timeline-label">
+								<span class="badge badge-info badge-pill">اقساط امروز</span>
+							</span>
+
+
+                                            <div class="box">
+
+                                                <!-- /.box-header -->
+                                                <div class="box-body">
+                                                    <div class="table-responsive">
+                                                        <table id="example"
+                                                               class="table table-bordered table-hover display nowrap margin-top-10 w-p100">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>ردیف</th>
+                                                                <th>نام و نام خانوادکی</th>
+                                                                <th>مبلغ</th>
+                                                                <th>جزییات</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            {% for course in object.courses.all %}
+                                                                <tr>
+
+                                                                    <td>{{ course.title }}</td>
+                                                                    <td>{{ course.master }}</td>
+                                                                    <td>{{ course.grade }}</td>
+                                                                    <td class="text-center">{{ course.course_student_count }}</td>
+                                                                    <td>{{ course.start_time }}</td>
+                                                                    <td>{{ course.finish_time }}</td>
+                                                                    <td>
+                                                                        <a class="btn btn-primary"
+                                                                           href="{{ course.get_absolute_url }}">جزییات
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            {% empty %}
+                                                                <h2 class="text-center">هیچ کلاس ای موجود نمیباشد</h2>
+                                                            {% endfor %}
+
+
+                                                            </tbody>
+
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- /.box-body -->
                                             </div>
-                                            <h2>گزارش درآمد</h2>
-                                            <div class="box-body">
-                                                {% for course in object.courses.all %}
-                                                    <h3>{{ course.title }}-{{ course.course_all_income }}</h3>
-                                                {% empty %}
-                                                    <h2 class="tex-center">هیچ گزارشی برای ارایه موجوئ نیست</h2>
-                                                {% endfor %}
-                                            </div>
-                                            <div class="box-footer text-right">
-                                            </div>
+
+
+                                            <span class="timeline-label">
+								<button class="btn btn-rounded btn-danger"><i class="fa fa-clock-o"></i></button>
+							</span>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /.tab-pane -->
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
                             </div>
                             <!-- /.tab-content -->
                         </div>
