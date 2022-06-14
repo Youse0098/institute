@@ -86,3 +86,9 @@ class MonthView(View):
 class UnpaidView(View):
     def get(self, request, institute_id):
         return render(request,'institute/unpaid.html')         
+
+      
+class TotalView(View):
+    def get(self, request, institute_id):
+        return render(request,'institute/total.html')         
+    
