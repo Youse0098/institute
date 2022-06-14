@@ -257,7 +257,27 @@
 
                             </div>
                             <!-- /.tab-pane -->
+      <div class="tab-pane" id="settings">
 
+                                    <div class="col-md-12 col-12 m-auto">
+                                        <div class="box">
+                                            <div class="box-header with-border">
+                                                <h2>مجموع درآمد آموزشگاه:{{ object.total_earn }}</h2>
+                                            </div>
+                                            <h2>گزارش درآمد</h2>
+                                            <div class="box-body">
+                                                {% for course in object.courses.all %}
+                                                    <h3>{{ course.title }}-{{ course.course_all_income }}</h3>
+                                                {% empty %}
+                                                    <h2 class="tex-center">هیچ گزارشی برای ارایه موجوئ نیست</h2>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="box-footer text-right">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.tab-pane -->
 
                         </div>
                         <!-- /.tab-content -->
