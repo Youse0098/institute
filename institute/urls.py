@@ -2,7 +2,7 @@ from django.urls import path
 
 from .views import (InstituteCreateView, InstituteDeleteView,
                     InstituteDetailView, InstituteListView,
-                    InstituteUpdateView)
+                    InstituteUpdateView,TodayView,MonthView,UnpaidView)
 
 app_name = "institute"
 
@@ -12,4 +12,8 @@ urlpatterns = [
     path("delete/<int:institute_id>/", InstituteDeleteView.as_view(), name="delete"),
     path("update/<int:id>/", InstituteUpdateView.as_view(), name="update"),
     path("create/", InstituteCreateView.as_view(), name="create"),
+    path("today/<int:institute_id>/", TodayView.as_view(), name="today"),
+    path("month/<int:institute_id>/", MonthView.as_view(), name="month"),
+    path("unpaid/<int:institute_id>/",UnpaidView.as_view(),name="unpaid"),  
+
 ]
