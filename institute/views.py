@@ -72,3 +72,17 @@ class InstituteDeleteView(View):
         institute = get_object_or_404(Institute, id=institute_id)
         institute.delete()
         return redirect("institute:list")
+
+
+class TodayView(View):
+    def get(self, request, institute_id):
+        return render(request,'institute/today.html')
+
+      
+class MonthView(View):
+    def get(self, request, institute_id):
+        return render(request,'institute/month.html')         
+
+class UnpaidView(View):
+    def get(self, request, institute_id):
+        return render(request,'institute/unpaid.html')         
