@@ -61,8 +61,9 @@ class StudentCreateView(CreateView):
             last_name=cd["last_name"],
             phone_number=cd["phone_number"],
             password=cd['national_code'],
-            is_student=True,
         )
+        user_obj.is_student =True
+        user_obj.save()
         new_form.user = user_obj
         new_form.save()
         messages.success(self.request, "", "btn btn-success")
