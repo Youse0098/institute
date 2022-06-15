@@ -9,8 +9,10 @@ class SiteSettingForm(forms.ModelForm):
         fields = [
             "title",
             "image",
+            "back"
         ]
         labels = {
             "title": "عنوان سایت",
             "image": "لوگو سایت",
+            "back":"تصویر پس زمینه",
         }
