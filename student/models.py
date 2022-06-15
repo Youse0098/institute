@@ -27,8 +27,12 @@ class Student(models.Model):
     father_name = models.CharField(
         max_length=125,
     )
-    father_phone_number = CustomCharField()
-    mother_phone_numer = CustomCharField()
+    father_phone_number = models.CharField(
+        max_length=11,
+    )
+    mother_phone_numer =  models.CharField(
+        max_length=11,
+    )
     home_number = models.CharField(
         max_length=10,
     )
