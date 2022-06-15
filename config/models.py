@@ -14,6 +14,8 @@ def validate_only_one_instance(obj):
 class SiteSetting(models.Model):
     title = models.CharField(max_length=125)
     image = models.ImageField(upload_to=get_file_path)
+    back = models.ImageField(upload_to=get_file_path)
+    
 
     def __str__(self):
         return self.title
